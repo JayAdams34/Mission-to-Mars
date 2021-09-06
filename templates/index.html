@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <body style="background-color:dimgrey;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +21,7 @@
       </div>
       <!-- Add section for Mars News -->
       <div class="row" id="mars-news">
-        <div class="col-md-12">
+        <div class=".col-xs-12 .col-md-8">
           <div class="media">
             <div class="media-body">
               <h2>Latest Mars News</h2>
@@ -30,6 +31,7 @@
           </div>
         </div>
       </div>
+
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
         <div class="col-md-8">
@@ -40,7 +42,7 @@
             alt="Responsive image"
           />
         </div>
-        <div class="col-md-4">
+        <div class=".col-xs-6 .col-md-4">
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
             <h4>Mars Facts</h4>
@@ -51,20 +53,21 @@
     </div>
 
     <!-- Mars Hemispheres -->
-    <div class="row" id="mars-hemispheres" style="margin-top:80px;">
-    <html lang="en">
-    <head>
-        <title>Mars Hemispheres</title>
-    </head>
-    <body>
-      {% for hemi in mars.hemispheres %}
-        <div class='col-md-6'>
-            <div class="full ref">
-            <img src="{{hemi.img_url}}" width="30%" height="30%"
-            div class="hemisphere"><h3>{{hemi.title}}</h3>
-            </div>
-        </div>
-      {% endfor %}
-      </div>
+    <TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
+      <table class ="center">
+      <TR ALIGN="CENTER"></TR>
+         <TH COLSPAN="1"><BR><H3>Mars Hemispheres</H3>
+         </TH>
+      </TR>
+      
+      <TR><TR ALIGN="CENTER">
+        {% for hemi in mars.hemispheres %}
+         <TH><img src="{{hemi.img_url}}" width="50%" height="50%" class="img-rounded"
+          div class="hemisphere"><h4>{{hemi.title}}</h4></TH>
+        {% endfor %}
+      </TR>
+      </table>
+      </TABLE>
+  
   </body>
 </html>
